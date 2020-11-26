@@ -6,7 +6,7 @@ app =  Flask(__name__)
 
 @app.route('/animal', methods=['GET'])
 def animal():
-    animals = ["Lion", "Dog", "Cat", "Cow"]
+    animals = ["Snake"]
     return Response(random.choices(animals), mimetype="text/plain")
 
 
@@ -20,7 +20,7 @@ def noise():
     elif animal == "Cat":
         noise = "Meow"
     else:
-        noise = "Moo"
+        noise = "SSSSS"
     return Response(noise, mimetype="text/plain")
 
 if __name__ == "__main__":
